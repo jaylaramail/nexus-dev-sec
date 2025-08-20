@@ -1,12 +1,74 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React, { useEffect } from 'react';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Skills from '@/components/Skills';
+import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Index = () => {
+  const { language } = useLanguage();
+
+  // Update document title and meta tags based on language
+  useEffect(() => {
+    const title = language === 'fr' 
+      ? 'Kumar - Développeur Web & Spécialiste Cybersécurité | Portfolio' 
+      : 'Kumar - Web Developer & Cybersecurity Specialist | Portfolio';
+    
+    const description = language === 'fr'
+      ? 'Portfolio professionnel de Kumar, développeur web et spécialiste en cybersécurité basé à Massy, France. Expertise en React, Node.js, sécurité, et développement mobile.'
+      : 'Professional portfolio of Kumar, web developer and cybersecurity specialist based in Massy, France. Expertise in React, Node.js, security, and mobile development.';
+
+    document.title = title;
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    }
+
+    // Update Open Graph meta tags
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', title);
+    }
+
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', description);
+    }
+
+    // Set document language
+    document.documentElement.lang = language;
+  }, [language]);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background font-inter">
+      {/* Header with Navigation */}
+      <Header />
+      
+      {/* Main Content */}
+      <main className="relative">
+        {/* Hero Section */}
+        <Hero />
+        
+        {/* About Section */}
+        <About />
+        
+        {/* Skills Section */}
+        <Skills />
+        
+        {/* Projects Section */}
+        <Projects />
+        
+        {/* Contact Section */}
+        <Contact />
+      </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
