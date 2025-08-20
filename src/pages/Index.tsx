@@ -6,6 +6,7 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Security from '@/components/Security';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Index = () => {
@@ -45,7 +46,10 @@ const Index = () => {
   }, [language]);
 
   return (
-    <div className="min-h-screen bg-background font-inter">
+    <div className="min-h-screen bg-background font-inter select-none">
+      {/* Security Component */}
+      <Security />
+      
       {/* Header with Navigation */}
       <Header />
       

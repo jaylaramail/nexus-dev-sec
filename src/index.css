@@ -47,6 +47,8 @@
     --warning-foreground: 0 0% 98%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
+    --info: 217 91% 60%;
+    --info-foreground: 0 0% 98%;
     
     /* Popover */
     --popover: 0 0% 100%;
@@ -123,6 +125,8 @@
     --warning-foreground: 0 0% 98%;
     --destructive: 0 84% 65%;
     --destructive-foreground: 0 0% 98%;
+    --info: 217 91% 65%;
+    --info-foreground: 0 0% 98%;
     
     --popover: 222 47% 8%;
     --popover-foreground: 0 0% 95%;

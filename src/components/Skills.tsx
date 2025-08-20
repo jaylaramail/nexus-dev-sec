@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Smartphone, Shield, Settings } from 'lucide-react';
+import { Code, Database, Palette, Settings, Smartphone, Shield } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Skills = () => {
@@ -12,9 +12,18 @@ const Skills = () => {
       color: 'text-primary',
       bgColor: 'bg-primary/10',
       skills: [
-        'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React.js', 'Angular 7',
-        'Vue.js', 'PHP', 'Node.js', 'Laravel', 'Symphony', 'Bootstrap',
-        'Tailwind CSS', 'jQuery', 'SEO'
+        { name: 'HTML5', level: 75 },
+        { name: 'CSS3', level: 80 },
+        { name: 'JavaScript', level: 85 },
+        { name: 'PHP', level: 90 },
+        { name: 'Node.js', level: 85 },
+        { name: 'React.js', level: 80 },
+        { name: 'Angular 7', level: 70 },
+        { name: 'Laravel', level: 85 },
+        { name: 'Symphony', level: 75 },
+        { name: 'Bootstrap', level: 90 },
+        { name: 'jQuery', level: 85 },
+        { name: 'SEO', level: 80 }
       ]
     },
     {
@@ -23,30 +32,70 @@ const Skills = () => {
       color: 'text-accent',
       bgColor: 'bg-accent/10',
       skills: [
-        'React Native', 'Flutter', 'Ionic', 'Cordova', 'Android Development',
-        'iOS Development', 'Cross-platform', 'Mobile UI/UX', 'App Store Deployment'
+        { name: 'React Native', level: 80 },
+        { name: 'Flutter', level: 70 },
+        { name: 'Ionic', level: 75 },
+        { name: 'Mobile UI/UX', level: 85 },
+        { name: 'App Store Deployment', level: 80 }
+      ]
+    },
+    {
+      icon: Database,
+      title: 'Base de Données & Backend',
+      color: 'text-success',
+      bgColor: 'bg-success/10',
+      skills: [
+        { name: 'MySQL', level: 80 },
+        { name: 'MariaDB', level: 75 },
+        { name: 'MongoDB', level: 70 },
+        { name: 'PostgreSQL', level: 70 },
+        { name: 'Spring Framework', level: 75 },
+        { name: 'JPA', level: 75 },
+        { name: 'Maven', level: 75 }
+      ]
+    },
+    {
+      icon: Palette,
+      title: 'Design & Graphisme',
+      color: 'text-warning',
+      bgColor: 'bg-warning/10',
+      skills: [
+        { name: 'Design et Graphisme', level: 90 },
+        { name: 'Aspect Visuel', level: 90 },
+        { name: 'Maquette', level: 85 },
+        { name: 'Adobe Flash', level: 80 },
+        { name: 'CorelDraw', level: 85 },
+        { name: 'Pagemaker', level: 75 }
       ]
     },
     {
       icon: Shield,
       title: t('skills.security.title'),
-      color: 'text-success',
-      bgColor: 'bg-success/10',
+      color: 'text-destructive',
+      bgColor: 'bg-destructive/10',
       skills: [
-        'Cybersécurité', 'RGPD', 'Security Audits', 'Penetration Testing',
-        'Vulnerability Assessment', 'Security Protocols', 'Data Protection',
-        'Ethical Hacking', 'Security Compliance'
+        { name: 'Cybersécurité', level: 85 },
+        { name: 'RGPD', level: 90 },
+        { name: 'Network Security', level: 80 },
+        { name: 'Identity & Access Management', level: 85 },
+        { name: 'Risk Management', level: 80 },
+        { name: 'Security Audits', level: 75 }
       ]
     },
     {
       icon: Settings,
-      title: t('skills.tools.title'),
-      color: 'text-warning',
-      bgColor: 'bg-warning/10',
+      title: 'Outils & Gestion',
+      color: 'text-info',
+      bgColor: 'bg-info/10',
       skills: [
-        'MySQL', 'MariaDB', 'MongoDB', 'PostgreSQL', 'Git', 'Docker',
-        'AWS', 'Firebase', 'CMS', 'WordPress', 'XML', 'JSON',
-        'Back Office', 'Server Management', 'API Development'
+        { name: 'GIT', level: 85 },
+        { name: 'Gestion de projet', level: 80 },
+        { name: 'Modélisation', level: 75 },
+        { name: 'CMS', level: 85 },
+        { name: 'WordPress', level: 90 },
+        { name: 'WooCommerce', level: 85 },
+        { name: 'XML', level: 80 },
+        { name: 'JSON', level: 85 }
       ]
     }
   ];
@@ -54,7 +103,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20">
       <div className="container-custom">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -67,11 +116,11 @@ const Skills = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {skillCategories.map((category, index) => (
               <div
                 key={index}
-                className="group glass-effect rounded-xl p-8 hover-lift animate-slide-up"
+                className="group glass-effect rounded-xl p-6 hover-lift animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Category Header */}
@@ -84,37 +133,50 @@ const Skills = () => {
                   </h3>
                 </div>
 
-                {/* Skills List */}
-                <div className="grid grid-cols-2 gap-3">
+                {/* Skills List with Progress Bars */}
+                <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}
-                      className="group/skill flex items-center gap-2 p-2 rounded-lg hover:bg-card-hover transition-colors duration-200"
+                      className="group/skill"
                     >
-                      <div className="w-2 h-2 rounded-full bg-gradient-primary opacity-60 group-hover/skill:opacity-100 transition-opacity duration-200"></div>
-                      <span className="text-sm text-muted-foreground group-hover/skill:text-foreground transition-colors duration-200 font-medium">
-                        {skill}
-                      </span>
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm font-medium text-foreground group-hover/skill:text-primary transition-colors duration-200">
+                          {skill.name}
+                        </span>
+                        <span className="text-xs text-muted-foreground font-semibold">
+                          {skill.level}%
+                        </span>
+                      </div>
+                      
+                      {/* Progress Bar */}
+                      <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
+                        <div 
+                          className={`h-2 rounded-full transition-all duration-1000 ease-out ${
+                            index === 0 ? 'bg-gradient-to-r from-primary to-primary-hover' :
+                            index === 1 ? 'bg-gradient-to-r from-accent to-accent-hover' :
+                            index === 2 ? 'bg-gradient-to-r from-success to-success' :
+                            index === 3 ? 'bg-gradient-to-r from-warning to-warning' :
+                            index === 4 ? 'bg-gradient-to-r from-destructive to-destructive' :
+                            'bg-gradient-to-r from-primary to-accent'
+                          } group-hover/skill:shadow-glow`}
+                          style={{ 
+                            width: `${skill.level}%`,
+                            animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s`
+                          }}
+                        ></div>
+                      </div>
                     </div>
                   ))}
                 </div>
 
-                {/* Progress Bar */}
+                {/* Category Stats */}
                 <div className="mt-6 pt-4 border-t border-border/50">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-muted-foreground">Expertise Level</span>
-                    <span className="text-sm font-medium text-foreground">Advanced</span>
-                  </div>
-                  <div className="w-full bg-secondary rounded-full h-2">
-                    <div 
-                      className={`h-2 rounded-full bg-gradient-to-r ${
-                        index === 0 ? 'from-primary to-primary-hover' :
-                        index === 1 ? 'from-accent to-accent-hover' :
-                        index === 2 ? 'from-success to-success' :
-                        'from-warning to-warning'
-                      } transition-all duration-1000 group-hover:scale-x-105`}
-                      style={{ width: '85%' }}
-                    ></div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Moyenne</span>
+                    <span className="text-sm font-medium text-foreground">
+                      {Math.round(category.skills.reduce((sum, skill) => sum + skill.level, 0) / category.skills.length)}%
+                    </span>
                   </div>
                 </div>
               </div>
@@ -123,15 +185,27 @@ const Skills = () => {
 
           {/* Additional Info */}
           <div className="text-center mt-16 animate-fade-in">
-            <div className="glass-effect rounded-xl p-8 max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold mb-4 gradient-text">
-                Continuous Learning
+            <div className="glass-effect rounded-xl p-8 max-w-3xl mx-auto">
+              <h3 className="text-2xl font-semibold mb-4 gradient-text">
+                Formation Continue
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Technology evolves rapidly, and I stay current with the latest trends, 
-                frameworks, and security practices. I believe in continuous improvement 
-                and adapting to new challenges in the ever-changing tech landscape.
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Les compétences sont ce qui rend confiant et indépendant dans la programmation 
+                et sont essentielles à la réussite. Cela peut demander de la détermination et 
+                de la pratique, mais presque toutes les compétences peuvent être apprises.
               </p>
+              
+              {/* Recent Certifications */}
+              <div className="grid md:grid-cols-2 gap-4 mt-6">
+                <div className="p-4 bg-card-hover rounded-lg border border-border/30">
+                  <h4 className="font-semibold text-primary mb-2">Cybersecurity (2023)</h4>
+                  <p className="text-sm text-muted-foreground">Computer Networking - Digital Network Security, Identity & Access Management</p>
+                </div>
+                <div className="p-4 bg-card-hover rounded-lg border border-border/30">
+                  <h4 className="font-semibold text-accent mb-2">Programming (2022)</h4>
+                  <p className="text-sm text-muted-foreground">Intermediate Python Programming, IT & Cybersecurity Risk Management</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
