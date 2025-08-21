@@ -1,7 +1,8 @@
 import React from 'react';
-import { ExternalLink, Github, Code2, Smartphone, Palette, Database } from 'lucide-react';
+import { ExternalLink, Code2, Smartphone, Palette, Database, ZoomIn } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import ImageZoomModal from './ImageZoomModal';
 
 // Import portfolio images
 import absbenqImg from '@/assets/portfolio/abs-benq.png';
@@ -16,6 +17,11 @@ import wsmukflashImg from '@/assets/portfolio/ws-muk-flash.jpg';
 
 const Projects = () => {
   const { t } = useLanguage();
+  const [selectedImage, setSelectedImage] = React.useState<{
+    src: string;
+    alt: string;
+    title: string;
+  } | null>(null);
 
   const projects = [
     {
@@ -189,15 +195,13 @@ const Projects = () => {
                         variant="ghost"
                         size="icon"
                         className="bg-white/20 hover:bg-white/30 text-white border-white/30 backdrop-blur-sm"
+                        onClick={() => setSelectedImage({
+                          src: project.image,
+                          alt: project.title,
+                          title: project.title
+                        })}
                       >
-                        <ExternalLink className="h-5 w-5" />
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="bg-white/20 hover:bg-white/30 text-white border-white/30 backdrop-blur-sm"
-                      >
-                        <Github className="h-5 w-5" />
+                        <ZoomIn className="h-5 w-5" />
                       </Button>
                     </div>
                   </div>
@@ -235,16 +239,14 @@ const Projects = () => {
                       variant="outline"
                       size="sm"
                       className="flex-1 group/btn"
+                      onClick={() => setSelectedImage({
+                        src: project.image,
+                        alt: project.title,
+                        title: project.title
+                      })}
                     >
-                      Voir le Projet
-                      <ExternalLink className="h-4 w-4 ml-2 group-hover/btn:scale-110 transition-transform duration-200" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="group/btn"
-                    >
-                      <Github className="h-4 w-4 group-hover/btn:scale-110 transition-transform duration-200" />
+                      Voir l'Image
+                      <ZoomIn className="h-4 w-4 ml-2 group-hover/btn:scale-110 transition-transform duration-200" />
                     </Button>
                   </div>
                 </div>
@@ -295,6 +297,15 @@ const Projects = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Zoom Modal */}
+      <ImageZoomModal
+        isOpen={selectedImage !== null}
+        onClose={() => setSelectedImage(null)}
+        imageSrc={selectedImage?.src || ''}
+        imageAlt={selectedImage?.alt || ''}
+        title={selectedImage?.title || ''}
+      />
     </section>
   );
 };
