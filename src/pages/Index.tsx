@@ -17,12 +17,12 @@ const Index = () => {
   // Update document title and meta tags based on language
   useEffect(() => {
     const title = language === 'fr' 
-      ? 'Jay - Développeur Web & Spécialiste Cybersécurité | Portfolio' 
-      : 'Jay - Web Developer & Cybersecurity Specialist | Portfolio';
+      ? 'Kumar - Développeur Web & Spécialiste Cybersécurité | Portfolio' 
+      : 'Kumar - Web Developer & Cybersecurity Specialist | Portfolio';
     
     const description = language === 'fr'
-      ? 'Portfolio professionnel de Jay, développeur web et spécialiste en cybersécurité basé à Massy, France. Expertise en React, Node.js, sécurité, et développement mobile.'
-      : 'Professional portfolio of Jay, web developer and cybersecurity specialist based in Massy, France. Expertise in React, Node.js, security, and mobile development.';
+      ? 'Portfolio professionnel de Kumar, développeur web et spécialiste en cybersécurité basé à Massy, France. Expertise en React, Node.js, sécurité, et développement mobile.'
+      : 'Professional portfolio of Kumar, web developer and cybersecurity specialist based in Massy, France. Expertise in React, Node.js, security, and mobile development.';
 
     document.title = title;
     
