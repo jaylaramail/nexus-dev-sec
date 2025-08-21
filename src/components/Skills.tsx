@@ -183,31 +183,6 @@ const Skills = () => {
             ))}
           </div>
 
-          {/* Additional Info */}
-          <div className="text-center mt-16 animate-fade-in">
-            <div className="glass-effect rounded-xl p-8 max-w-3xl mx-auto">
-              <h3 className="text-2xl font-semibold mb-4 gradient-text">
-                Formation Continue
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Les compétences sont ce qui rend confiant et indépendant dans la programmation 
-                et sont essentielles à la réussite. Cela peut demander de la détermination et 
-                de la pratique, mais presque toutes les compétences peuvent être apprises.
-              </p>
-              
-              {/* Recent Certifications */}
-              <div className="grid md:grid-cols-2 gap-4 mt-6">
-                <div className="p-4 bg-card-hover rounded-lg border border-border/30">
-                  <h4 className="font-semibold text-primary mb-2">Cybersecurity (2023)</h4>
-                  <p className="text-sm text-muted-foreground">Computer Networking - Digital Network Security, Identity & Access Management</p>
-                </div>
-                <div className="p-4 bg-card-hover rounded-lg border border-border/30">
-                  <h4 className="font-semibold text-accent mb-2">Programming (2022)</h4>
-                  <p className="text-sm text-muted-foreground">Intermediate Python Programming, IT & Cybersecurity Risk Management</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

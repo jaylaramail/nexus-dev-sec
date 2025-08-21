@@ -20,6 +20,24 @@ const Hero = () => {
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        {/* Floating Code Elements */}
+        <div className="absolute top-10 left-10 text-primary/30 animate-bounce delay-500">
+          <span className="text-2xl font-mono">&lt;/&gt;</span>
+        </div>
+        <div className="absolute top-20 right-20 text-accent/30 animate-bounce delay-700">
+          <span className="text-xl">🔐</span>
+        </div>
+        <div className="absolute bottom-20 left-20 text-primary/30 animate-bounce delay-1000">
+          <span className="text-lg font-mono">{ }</span>
+        </div>
+        <div className="absolute bottom-10 right-10 text-accent/30 animate-bounce delay-1200">
+          <span className="text-xl">🛡️</span>
+        </div>
+        
+        {/* Matrix Rain Effect - Subtle */}
+        <div className="absolute top-0 left-1/3 w-px h-full bg-gradient-to-b from-transparent via-primary/10 to-transparent animate-pulse delay-300"></div>
+        <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-accent/10 to-transparent animate-pulse delay-600"></div>
       </div>
 
       {/* Content */}
@@ -31,8 +49,19 @@ const Hero = () => {
               {t('hero.greeting')}
             </span>
             <div className="relative">
-              <h1 className="text-5xl md:text-7xl font-bold mb-4">
-                <span className="gradient-text">Kumar</span>
+              <h1 className="text-5xl md:text-7xl font-bold mb-4 relative">
+                <span className="gradient-text animate-pulse">Jay</span>
+                {/* Floating Tech Icons */}
+                <div className="absolute -top-4 -right-4 animate-bounce">
+                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <span className="text-primary text-sm font-mono">{`</>`}</span>
+                  </div>
+                </div>
+                <div className="absolute -bottom-2 -left-6 animate-bounce delay-300">
+                  <div className="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center">
+                    <span className="text-accent text-xs">🛡️</span>
+                  </div>
+                </div>
               </h1>
               <div className="absolute -inset-1 bg-gradient-primary opacity-20 blur-xl rounded-full"></div>
             </div>
