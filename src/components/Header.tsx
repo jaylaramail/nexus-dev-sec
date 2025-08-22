@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Menu, X, Globe } from 'lucide-react';
+import ThemeSelector from './ThemeSelector';
 import { Button } from '@/components/ui/button';
 import { useTheme } from '@/components/ui/theme-provider';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -58,7 +59,7 @@ const Header = () => {
               onClick={() => scrollToSection('hero')}
               className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-200"
             >
-              &lt; Kumar /&gt;
+              &lt; Jay /&gt;
             </button>
           </div>
 
@@ -76,8 +77,10 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Theme & Language Controls */}
+           {/* Theme & Language Controls */}
           <div className="flex items-center space-x-2">
+            <ThemeSelector />
+            
             <Button
               variant="ghost"
               size="icon"

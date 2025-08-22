@@ -3,8 +3,8 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Skills from '@/components/Skills';
-import Formation from '@/components/Formation';
-import Experience from '@/components/Experience';
+import FormationNew from '@/components/FormationNew';
+import ExperienceNew from '@/components/ExperienceNew';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -17,12 +17,12 @@ const Index = () => {
   // Update document title and meta tags based on language
   useEffect(() => {
     const title = language === 'fr' 
-      ? 'Kumar - Développeur Web & Spécialiste Cybersécurité | Portfolio' 
-      : 'Kumar - Web Developer & Cybersecurity Specialist | Portfolio';
+      ? 'Jay - Développeur d\'Application & Spécialiste Cybersécurité | Portfolio' 
+      : 'Jay - Application Developer & Cybersecurity Specialist | Portfolio';
     
     const description = language === 'fr'
-      ? 'Portfolio professionnel de Kumar, développeur web et spécialiste en cybersécurité basé à Massy, France. Expertise en React, Node.js, sécurité, et développement mobile.'
-      : 'Professional portfolio of Kumar, web developer and cybersecurity specialist based in Massy, France. Expertise in React, Node.js, security, and mobile development.';
+      ? 'Portfolio professionnel de Jay, développeur d\'application et spécialiste en cybersécurité basé à Massy, France. Expertise en React, Node.js, sécurité, et développement mobile.'
+      : 'Professional portfolio of Jay, application developer and cybersecurity specialist based in Massy, France. Expertise in React, Node.js, security, and mobile development.';
 
     document.title = title;
     
@@ -67,10 +67,10 @@ const Index = () => {
         <Skills />
         
         {/* Formation Section */}
-        <Formation />
+        <FormationNew />
         
         {/* Experience Section */}
-        <Experience />
+        <ExperienceNew />
         
         {/* Projects Section */}
         <Projects />

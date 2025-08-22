@@ -91,6 +91,22 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Color Theme Variants */
+  .theme-blue {
+    --primary: 222 84% 22%;
+    --accent: 217 91% 60%;
+  }
+  
+  .theme-green {
+    --primary: 142 76% 36%;
+    --accent: 142 70% 45%;
+  }
+  
+  .theme-purple {
+    --primary: 263 70% 50%;
+    --accent: 270 95% 75%;
+  }
+
   .dark {
     /* Dark Theme - Professional Tech Dark Mode */
     --background: 222 84% 5%;

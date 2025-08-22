@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Mail, ExternalLink } from 'lucide-react';
+import { ArrowRight, Mail, ExternalLink, Code, Shield, Database, Server, Globe, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -22,6 +22,28 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
+      {/* Animated Developer Icons */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 animate-float">
+          <Code className="h-12 w-12 text-primary/20" />
+        </div>
+        <div className="absolute top-32 right-20 animate-float-delay-1">
+          <Shield className="h-16 w-16 text-accent/20" />
+        </div>
+        <div className="absolute bottom-40 left-20 animate-float-delay-2">
+          <Database className="h-10 w-10 text-primary/30" />
+        </div>
+        <div className="absolute bottom-20 right-10 animate-float">
+          <Server className="h-14 w-14 text-accent/30" />
+        </div>
+        <div className="absolute top-1/2 left-5 animate-float-delay-1">
+          <Globe className="h-8 w-8 text-primary/25" />
+        </div>
+        <div className="absolute top-1/3 right-5 animate-float-delay-2">
+          <Lock className="h-12 w-12 text-accent/25" />
+        </div>
+      </div>
+
       {/* Content */}
       <div className="relative z-10 container-custom text-center">
         <div className="max-w-4xl mx-auto animate-fade-in">
@@ -32,7 +54,7 @@ const Hero = () => {
             </span>
             <div className="relative">
               <h1 className="text-5xl md:text-7xl font-bold mb-4">
-                <span className="gradient-text">Kumar</span>
+                <span className="gradient-text">Jay</span>
               </h1>
               <div className="absolute -inset-1 bg-gradient-primary opacity-20 blur-xl rounded-full"></div>
             </div>

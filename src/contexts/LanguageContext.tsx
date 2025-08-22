@@ -21,8 +21,8 @@ const translations = {
     
     // Hero Section
     'hero.greeting': 'Hi, I\'m',
-    'hero.title': 'Web Developer & Cybersecurity Specialist',
-    'hero.subtitle': 'I create secure, modern web applications and mobile solutions with expertise in cybersecurity and full-stack development.',
+    'hero.title': 'Application Developer & Cybersecurity Specialist',
+    'hero.subtitle': 'More than 10 years of experience in IT and services sector, specializing in modern web development, full-stack applications, and cybersecurity. Based in Massy, France.',
     'hero.cta.contact': 'Get In Touch',
     'hero.cta.projects': 'View Projects',
     
@@ -76,8 +76,8 @@ const translations = {
     
     // Hero Section
     'hero.greeting': 'Salut, je suis',
-    'hero.title': 'Développeur Web & Spécialiste Cybersécurité',
-    'hero.subtitle': 'Je crée des applications web sécurisées et modernes ainsi que des solutions mobiles avec une expertise en cybersécurité et développement full-stack.',
+    'hero.title': 'Développeur d\'Application & Spécialiste Cybersécurité',
+    'hero.subtitle': 'Plus de 10 années d\'expérience dans le secteur informatique et des services, spécialisé dans le développement web moderne, applications full-stack et cybersécurité. Basé à Massy, France.',
     'hero.cta.contact': 'Me Contacter',
     'hero.cta.projects': 'Voir les Projets',
     
