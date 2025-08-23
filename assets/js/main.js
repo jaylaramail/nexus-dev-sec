@@ -155,22 +155,64 @@ class PortfolioApp {
         
         this.formation = [
             {
-                title: this.currentLanguage === 'fr' ? 'Master en Cybersécurité' : 'Master in Cybersecurity',
-                institution: 'ESIEA',
-                period: '2020-2022',
-                location: 'Paris, France',
+                title: this.currentLanguage === 'fr' ? 'COMPUTER NETWORKING - DIGITAL NETWORK SECURITY' : 'COMPUTER NETWORKING - DIGITAL NETWORK SECURITY',
+                institution: 'Alison - Cybersecurity',
+                period: '2023',
+                location: 'Formation en ligne',
                 description: this.currentLanguage === 'fr' ? 
-                    'Spécialisation en sécurité des systèmes d\'information, cryptographie et audit de sécurité.' :
-                    'Specialization in information systems security, cryptography and security auditing.'
+                    'Certification en sécurité des réseaux numériques et protection des infrastructures informatiques.' :
+                    'Certification in digital network security and IT infrastructure protection.',
+                category: 'certification'
             },
             {
-                title: this.currentLanguage === 'fr' ? 'Licence en Informatique' : 'Bachelor in Computer Science',
-                institution: 'Université Paris-Saclay',
-                period: '2017-2020',
-                location: 'Orsay, France',
+                title: this.currentLanguage === 'fr' ? 'DIPLOMA IN IDENTITY AND ACCESS MANAGEMENT' : 'DIPLOMA IN IDENTITY AND ACCESS MANAGEMENT',
+                institution: 'Alison - Cybersecurity',
+                period: '2023',
+                location: 'Formation en ligne',
                 description: this.currentLanguage === 'fr' ? 
-                    'Formation complète en développement logiciel, algorithmiques et structures de données.' :
-                    'Comprehensive training in software development, algorithms and data structures.'
+                    'Diplôme spécialisé en gestion des identités et des accès pour la sécurité des systèmes.' :
+                    'Specialized diploma in identity and access management for system security.',
+                category: 'certification'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'IT & CYBERSECURITY RISK MANAGEMENT ESSENTIAL TRAINING' : 'IT & CYBERSECURITY RISK MANAGEMENT ESSENTIAL TRAINING',
+                institution: 'LinkedIn - Cybersecurity',
+                period: '2023',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Formation essentielle sur la gestion des risques en cybersécurité et sécurité informatique.' :
+                    'Essential training in cybersecurity and IT risk management.',
+                category: 'certification'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'INTERMEDIATE PYTHON PROGRAMMING' : 'INTERMEDIATE PYTHON PROGRAMMING',
+                institution: 'DataCamp - Python',
+                period: '2022',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Programmation Python intermédiaire pour le développement d\'applications et l\'analyse de données.' :
+                    'Intermediate Python programming for application development and data analysis.',
+                category: 'certification'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'Cours en technologie (Spécial WEB)' : 'Web Technology Course (Web Specialist)',
+                institution: 'Net Object Systems Pvt. Ltd.',
+                period: '2000-2001',
+                location: 'Puduchéry, Inde',
+                description: this.currentLanguage === 'fr' ? 
+                    'Formation approfondie sur les éléments HTML, CSS et Javascript pour le développement web spécialisé.' :
+                    'Comprehensive training in HTML, CSS and Javascript elements for specialized web development.',
+                category: 'education'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'Diplôme en PAO (Publication assistée par ordinateur)' : 'Desktop Publishing Diploma (DTP)',
+                institution: 'University of Community College',
+                period: '1999-2000',
+                location: 'Puduchéry, Inde',
+                description: this.currentLanguage === 'fr' ? 
+                    'Formation en Microsoft Word, Pagemaker, CorelDraw et pagination pour la publication de livres et de presse.' :
+                    'Training in Microsoft Word, Pagemaker, CorelDraw and pagination for book and press publication.',
+                category: 'education'
             }
         ];
         
@@ -181,8 +223,12 @@ class PortfolioApp {
                 type: this.currentLanguage === 'fr' ? 'Bénévole' : 'Volunteer',
                 location: 'Puduchéry, Inde (Télétravail)',
                 period: '2023',
-                icon: 'bi-code-slash',
-                color: 'text-primary'
+                icon: 'bi-wordpress',
+                color: 'text-primary',
+                description: this.currentLanguage === 'fr' ? 
+                    'Développement de sites WordPress, personnalisation de thèmes et plugins, optimisation SEO.' :
+                    'WordPress site development, theme and plugin customization, SEO optimization.',
+                technologies: ['WordPress', 'PHP', 'MySQL', 'CSS', 'JavaScript']
             },
             {
                 title: this.currentLanguage === 'fr' ? 'DÉVELOPPEUR FULL-STACK' : 'FULL-STACK DEVELOPER',
@@ -190,8 +236,12 @@ class PortfolioApp {
                 type: this.currentLanguage === 'fr' ? 'Stagiaire' : 'Intern',
                 location: 'Puduchéry, Inde (Télétravail)',
                 period: '2022',
-                icon: 'bi-server',
-                color: 'text-success'
+                icon: 'bi-layers',
+                color: 'text-success',
+                description: this.currentLanguage === 'fr' ? 
+                    'Développement d\'applications full-stack avec Spring, JPA, MySQL, Maven, ReactJS et Bootstrap.' :
+                    'Full-stack application development with Spring, JPA, MySQL, Maven, ReactJS and Bootstrap.',
+                technologies: ['Spring', 'JPA', 'MySQL', 'Maven', 'ReactJS', 'Bootstrap']
             },
             {
                 title: this.currentLanguage === 'fr' ? 'DÉVELOPPEUR WEB WOOCOMMERCE' : 'WOOCOMMERCE WEB DEVELOPER',
@@ -199,41 +249,159 @@ class PortfolioApp {
                 type: this.currentLanguage === 'fr' ? 'Stagiaire' : 'Intern',
                 location: 'Paris, France',
                 period: '2021',
-                icon: 'bi-globe',
-                color: 'text-info'
+                icon: 'bi-cart3',
+                color: 'text-info',
+                description: this.currentLanguage === 'fr' ? 
+                    'Développement de sites e-commerce avec WooCommerce, intégration de systèmes de paiement et gestion des commandes.' :
+                    'E-commerce site development with WooCommerce, payment system integration and order management.',
+                technologies: ['WooCommerce', 'WordPress', 'PHP', 'CSS', 'JavaScript', 'Payment Gateway']
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'TECHNIQUE SUPPORT' : 'TECHNICAL SUPPORT',
+                company: 'ALTRUISTIC BUSINESS SOLUTIONS Pvt. Ltd.',
+                type: this.currentLanguage === 'fr' ? 'Freelancer à Distance' : 'Remote Freelancer',
+                location: 'Puduchéry, Inde',
+                period: '2019-2020',
+                icon: 'bi-headset',
+                color: 'text-warning',
+                description: this.currentLanguage === 'fr' ? 
+                    'Support technique à distance, résolution de problèmes informatiques et assistance utilisateur.' :
+                    'Remote technical support, IT problem resolution and user assistance.',
+                technologies: ['Technical Support', 'Remote Assistance', 'Problem Solving', 'Customer Service']
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'SPÉCIALISTE DE SOUTIEN TECHNIQUE' : 'TECHNICAL SUPPORT SPECIALIST',
+                company: 'ALTRUISTIC BUSINESS SOLUTIONS Pvt. Ltd.',
+                type: 'Full-time',
+                location: 'Puduchéry, Inde',
+                period: '2015-2016',
+                icon: 'bi-tools',
+                color: 'text-danger',
+                description: this.currentLanguage === 'fr' ? 
+                    'Spécialiste en support technique, maintenance des systèmes et formation des utilisateurs.' :
+                    'Technical support specialist, system maintenance and user training.',
+                technologies: ['System Maintenance', 'User Training', 'Technical Documentation', 'Troubleshooting']
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'ANALYSE TECHNIQUE DE RECHERCHE ET ANALYSE DESIGN' : 'RESEARCH TECHNICAL ANALYSIS & DESIGN ANALYST',
+                company: 'CHENDURR TECHNOLOGIES Pvt. Ltd.',
+                type: 'Full-time',
+                location: 'Puduchéry, Inde',
+                period: '2012-2015',
+                icon: 'bi-graph-up',
+                color: 'text-primary',
+                description: this.currentLanguage === 'fr' ? 
+                    'Analyse technique de recherche, conception de solutions et optimisation des processus de développement.' :
+                    'Research technical analysis, solution design and development process optimization.',
+                technologies: ['Research Analysis', 'Technical Design', 'Process Optimization', 'Documentation']
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'ASSISTANT RESPONSABLE DES OPÉRATIONS' : 'ASSISTANT OPERATIONS MANAGER',
+                company: 'EXTOL TECHNOLOGIES Pvt. Ltd.',
+                type: 'Full-time',
+                location: 'Puduchéry, Inde',
+                period: '2007-2011',
+                icon: 'bi-person-gear',
+                color: 'text-success',
+                description: this.currentLanguage === 'fr' ? 
+                    'Assistant responsable des opérations, gestion d\'équipe et coordination des projets techniques.' :
+                    'Assistant operations manager, team management and technical project coordination.',
+                technologies: ['Operations Management', 'Team Leadership', 'Project Coordination', 'Process Management']
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'RECHERCHE ET DÉVELOPPEMENT ET ADMINISTRATEUR DU SYSTÈME' : 'R&D AND SYSTEM ADMINISTRATOR',
+                company: 'MUKESH TECHNOLOGIES Pvt. Ltd.',
+                type: 'Full-time',
+                location: 'Puduchéry, Inde',
+                period: '2005-2007',
+                icon: 'bi-cpu',
+                color: 'text-info',
+                description: this.currentLanguage === 'fr' ? 
+                    'Recherche et développement de nouvelles technologies, administration système et maintenance réseau.' :
+                    'Research and development of new technologies, system administration and network maintenance.',
+                technologies: ['R&D', 'System Administration', 'Network Management', 'Technology Research']
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'DESIGNER ADOBE FLASH ET ADMINISTRATEUR DE BUREAU' : 'ADOBE FLASH DESIGNER & OFFICE ADMINISTRATOR',
+                company: 'AGNI NETS Pvt. Ltd.',
+                type: 'Full-time',
+                location: 'Puduchéry, Inde',
+                period: '2002-2004',
+                icon: 'bi-palette2',
+                color: 'text-purple',
+                description: this.currentLanguage === 'fr' ? 
+                    'Conception d\'animations Flash, design graphique et administration des systèmes de bureau.' :
+                    'Flash animation design, graphic design and office system administration.',
+                technologies: ['Adobe Flash', 'Graphic Design', 'Animation', 'Office Administration']
             }
         ];
         
         this.projects = [
             {
-                title: 'E-commerce Platform',
+                title: this.currentLanguage === 'fr' ? 'Site Web Commercial' : 'Commercial Website',
                 description: this.currentLanguage === 'fr' ? 
-                    'Plateforme e-commerce complète avec React et Node.js' :
-                    'Complete e-commerce platform with React and Node.js',
-                image: './assets/images/project-ecommerce.jpg',
-                technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-                liveUrl: 'https://example-ecommerce.com',
-                codeUrl: 'https://github.com/jay/ecommerce'
+                    'Site web commercial développé avec WordPress, optimisé pour les performances et le SEO.' :
+                    'Commercial website developed with WordPress, optimized for performance and SEO.',
+                image: './assets/images/abs-benq.png',
+                technologies: ['WordPress', 'PHP', 'MySQL', 'SEO'],
+                liveUrl: 'https://altruisticbusinesssolutions.com',
+                codeUrl: null,
+                category: 'website'
             },
             {
-                title: 'Security Dashboard',
+                title: this.currentLanguage === 'fr' ? 'Application FULL STACK' : 'FULL STACK Application',
                 description: this.currentLanguage === 'fr' ? 
-                    'Tableau de bord de sécurité pour surveillance réseau' :
-                    'Security dashboard for network monitoring',
-                image: './assets/images/project-security.jpg',
-                technologies: ['Vue.js', 'Python', 'PostgreSQL', 'Docker'],
-                liveUrl: 'https://security-dashboard.com',
-                codeUrl: 'https://github.com/jay/security-dashboard'
+                    'Application full-stack avec Spring, JPA, MySQL, Maven, ReactJS et Bootstrap.' :
+                    'Full-stack application with Spring, JPA, MySQL, Maven, ReactJS and Bootstrap.',
+                image: './assets/images/ws-abs.png',
+                technologies: ['Spring', 'JPA', 'MySQL', 'Maven', 'ReactJS', 'Bootstrap'],
+                liveUrl: 'https://abs-portal.com',
+                codeUrl: 'https://github.com/jay/fullstack-portal',
+                category: 'application'
             },
             {
-                title: 'Mobile Banking App',
+                title: this.currentLanguage === 'fr' ? 'Site WordPress WOOCommerce' : 'WordPress WOOCommerce Site',
                 description: this.currentLanguage === 'fr' ? 
-                    'Application bancaire mobile sécurisée' :
-                    'Secure mobile banking application',
-                image: './assets/images/project-mobile.jpg',
-                technologies: ['React Native', 'Firebase', 'Biometric Auth'],
-                liveUrl: null,
-                codeUrl: 'https://github.com/jay/mobile-banking'
+                    'Site e-commerce développé avec WooCommerce, système de paiement intégré et gestion des commandes.' :
+                    'E-commerce site developed with WooCommerce, integrated payment system and order management.',
+                image: './assets/images/ws-plantaor.png',
+                technologies: ['WooCommerce', 'WordPress', 'PHP', 'Payment Gateway'],
+                liveUrl: 'https://plantaor.fr',
+                codeUrl: null,
+                category: 'ecommerce'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'Jeu JavaScript' : 'JavaScript Game',
+                description: this.currentLanguage === 'fr' ? 
+                    'Jeu interactif développé en JavaScript pur avec animations CSS et logique de jeu avancée.' :
+                    'Interactive game developed in pure JavaScript with CSS animations and advanced game logic.',
+                image: './assets/images/js-game.png',
+                technologies: ['JavaScript', 'HTML5', 'CSS3', 'Canvas'],
+                liveUrl: 'https://jay-game.netlify.app',
+                codeUrl: 'https://github.com/jay/javascript-game',
+                category: 'game'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'Site Internet Bootstrap' : 'Bootstrap Website',
+                description: this.currentLanguage === 'fr' ? 
+                    'Site web responsive développé avec Bootstrap, design moderne et optimisé mobile.' :
+                    'Responsive website developed with Bootstrap, modern design and mobile optimized.',
+                image: './assets/images/wp-kod.jpg',
+                technologies: ['Bootstrap', 'HTML5', 'CSS3', 'JavaScript'],
+                liveUrl: 'https://kod-design.com',
+                codeUrl: 'https://github.com/jay/bootstrap-site',
+                category: 'website'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'Site Internet HTML' : 'HTML Website',
+                description: this.currentLanguage === 'fr' ? 
+                    'Site web statique développé en HTML/CSS pur avec design responsive et animations fluides.' :
+                    'Static website developed in pure HTML/CSS with responsive design and smooth animations.',
+                image: './assets/images/ws-p2s-01.jpg',
+                technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
+                liveUrl: 'https://p2s-website.com',
+                codeUrl: 'https://github.com/jay/html-website',
+                category: 'website'
             }
         ];
         
@@ -335,16 +503,24 @@ class PortfolioApp {
         const container = document.getElementById('formationContainer');
         if (!container) return;
         
+        // Separate education and certifications
+        const education = this.formation.filter(item => item.category === 'education' || !item.category);
+        const certifications = this.formation.filter(item => item.category === 'certification');
+        
         container.innerHTML = `
             <div class="col-12">
                 <div class="timeline">
-                    ${this.formation.map((item, index) => `
+                    ${certifications.concat(education).map((item, index) => `
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="d-flex justify-content-between align-items-start mb-3">
                                     <div>
                                         <h5 class="fw-bold text-primary">${item.title}</h5>
                                         <h6 class="text-muted">${item.institution}</h6>
+                                        ${item.category === 'certification' ? 
+                                            '<span class="badge bg-success mb-2">Certification</span>' : 
+                                            '<span class="badge bg-info mb-2">Formation</span>'
+                                        }
                                     </div>
                                     <span class="badge bg-primary">${item.period}</span>
                                 </div>
@@ -381,9 +557,17 @@ class PortfolioApp {
                                         <div class="badge bg-primary">${exp.period}</div>
                                     </div>
                                 </div>
-                                <p class="text-muted mb-0">
-                                    <i class="bi bi-geo-alt me-2"></i>${exp.location}
-                                </p>
+                                 <p class="text-muted mb-2">
+                                     <i class="bi bi-geo-alt me-2"></i>${exp.location}
+                                 </p>
+                                 ${exp.description ? `<p class="mb-3">${exp.description}</p>` : ''}
+                                 ${exp.technologies ? `
+                                     <div class="mb-0">
+                                         ${exp.technologies.map(tech => `
+                                             <span class="badge bg-light text-dark me-1 mb-1">${tech}</span>
+                                         `).join('')}
+                                     </div>
+                                 ` : ''}
                             </div>
                         </div>
                     `).join('')}
@@ -415,10 +599,12 @@ class PortfolioApp {
                                     ${this.translations[this.currentLanguage]['projects.view']}
                                 </a>
                             ` : ''}
-                            <a href="${project.codeUrl}" target="_blank" class="btn btn-outline-primary btn-sm">
-                                <i class="bi bi-github me-1"></i>
-                                ${this.translations[this.currentLanguage]['projects.code']}
-                            </a>
+                            ${project.codeUrl ? `
+                                <a href="${project.codeUrl}" target="_blank" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-github me-1"></i>
+                                    ${this.translations[this.currentLanguage]['projects.code']}
+                                </a>
+                            ` : ''}
                         </div>
                     </div>
                 </div>

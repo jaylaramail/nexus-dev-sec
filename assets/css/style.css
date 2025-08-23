@@ -133,8 +133,13 @@ body {
   border-radius: 50%;
 }
 
+/* Purple color classes */
 .bg-purple {
   background-color: var(--bg-purple) !important;
+}
+
+.text-purple {
+  color: var(--bg-purple) !important;
 }
 
 /* Hero Section */
