@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay - Développeur d'Application & Spécialiste Cybersécurité | Portfolio</title>
+    <meta name="description" content="Portfolio professionnel de Jay, développeur d'application et spécialiste en cybersécurité basé à Massy, France. Expertise en React, Node.js, sécurité, et développement mobile.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="développeur, cybersécurité, React, Node.js, portfolio, Jay, Massy, France">
+    <meta name="author" content="Jay">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Jay - Développeur d'Application & Spécialiste Cybersécurité">
+    <meta property="og:description" content="Portfolio professionnel de Jay, développeur d'application et spécialiste en cybersécurité basé à Massy, France.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jayvues.web.app/">
+    <meta property="og:image" content="./assets/images/jay-avatar.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jay - Développeur d'Application & Spécialiste Cybersécurité">
+    <meta name="twitter:description" content="Portfolio professionnel de Jay, développeur d'application et spécialiste en cybersécurité basé à Massy, France.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/jay-favicon.svg" type="image/svg+xml">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet">
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Security Component -->
+    <div id="security-component" style="display: none;"></div>
+    
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainHeader">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <img src="./assets/images/jay-favicon.svg" alt="Jay Logo" width="32" height="32" class="me-2">
+                Jay
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <nav class="navbar-nav mx-auto">
+                    <a class="nav-link" href="#about" data-i18n="nav.about">À propos</a>
+                    <a class="nav-link" href="#skills" data-i18n="nav.skills">Compétences</a>
+                    <a class="nav-link" href="#formation" data-i18n="nav.formation">Formation</a>
+                    <a class="nav-link" href="#experience" data-i18n="nav.experience">Expérience</a>
+                    <a class="nav-link" href="#projects" data-i18n="nav.projects">Projets</a>
+                    <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+                </nav>
+                
+                <div class="d-flex gap-2">
+                    <!-- Language Switcher -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-globe me-1"></i>
+                            <span id="currentLang">FR</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="switchLanguage('fr')">🇫🇷 Français</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchLanguage('en')">🇬🇧 English</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Theme Switcher -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-palette me-1"></i>
+                            Theme
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="switchTheme('light')">
+                                <i class="bi bi-sun me-2"></i>Light
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchTheme('dark')">
+                                <i class="bi bi-moon me-2"></i>Dark
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchColorTheme('blue')">
+                                <span class="color-dot bg-primary me-2"></span>Blue Ocean
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchColorTheme('green')">
+                                <span class="color-dot bg-success me-2"></span>Forest Green
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchColorTheme('purple')">
+                                <span class="color-dot bg-purple me-2"></span>Purple Galaxy
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section d-flex align-items-center position-relative overflow-hidden">
+            <div class="hero-bg-animation"></div>
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <p class="text-primary mb-3 fs-5" data-i18n="hero.greeting">Salut, je suis</p>
+                            <h1 class="display-4 fw-bold mb-4 animate-fade-in">
+                                Jay
+                            </h1>
+                            <h2 class="h3 mb-4 text-muted animate-fade-in-delay" data-i18n="hero.title">
+                                Développeur d'Application & Spécialiste Cybersécurité
+                            </h2>
+                            <p class="lead mb-5 animate-fade-in-delay-2" data-i18n="hero.subtitle">
+                                Plus de 10 années d'expérience dans le secteur informatique et des services, spécialisé dans le développement web moderne, applications full-stack et cybersécurité. Basé à Massy, France.
+                            </p>
+                            <div class="d-flex gap-3 flex-wrap animate-fade-in-delay-3">
+                                <a href="#contact" class="btn btn-primary btn-lg px-4">
+                                    <i class="bi bi-envelope me-2"></i>
+                                    <span data-i18n="hero.cta.contact">Me Contacter</span>
+                                </a>
+                                <a href="#projects" class="btn btn-outline-primary btn-lg px-4">
+                                    <i class="bi bi-code-slash me-2"></i>
+                                    <span data-i18n="hero.cta.projects">Voir les Projets</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image-container position-relative">
+                            <div class="hero-floating-icons">
+                                <div class="floating-icon" style="--delay: 0s">
+                                    <i class="bi bi-code-slash text-primary"></i>
+                                </div>
+                                <div class="floating-icon" style="--delay: 1s">
+                                    <i class="bi bi-shield-check text-success"></i>
+                                </div>
+                                <div class="floating-icon" style="--delay: 2s">
+                                    <i class="bi bi-laptop text-info"></i>
+                                </div>
+                                <div class="floating-icon" style="--delay: 3s">
+                                    <i class="bi bi-server text-warning"></i>
+                                </div>
+                                <div class="floating-icon" style="--delay: 4s">
+                                    <i class="bi bi-database text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="hero-avatar">
+                                <img src="./assets/images/jay-avatar.jpg" alt="Jay Profile" class="img-fluid rounded-circle shadow-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-5">
+                        <h2 class="display-5 fw-bold mb-4" data-i18n="about.title">À propos de moi</h2>
+                        <p class="lead" data-i18n="about.description">
+                            J'ai des années d'expérience dans le secteur informatique et des services, notamment en développement web et cybersécurité. Joueur d'équipe, j'aime rencontrer de nouvelles personnes et travailler en mode projet avec un souci constant de relation client.
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm hover-lift">
+                            <div class="card-body text-center">
+                                <i class="bi bi-geo-alt text-primary fs-1 mb-3"></i>
+                                <h5 class="card-title" data-i18n="about.location">Massy, France</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm hover-lift">
+                            <div class="card-body text-center">
+                                <i class="bi bi-check-circle text-success fs-1 mb-3"></i>
+                                <h5 class="card-title" data-i18n="about.projects.completed">Projets Terminés</h5>
+                                <p class="card-text fs-2 fw-bold text-primary">20+</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm hover-lift">
+                            <div class="card-body text-center">
+                                <i class="bi bi-arrow-repeat text-warning fs-1 mb-3"></i>
+                                <h5 class="card-title" data-i18n="about.projects.ongoing">Toujours en cours plus...</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4" data-i18n="skills.title">Compétences Techniques</h2>
+                    <p class="lead" data-i18n="skills.subtitle">
+                        Les compétences sont ce qui rend confiant et indépendant dans la programmation et sont essentielles à la réussite.
+                    </p>
+                </div>
+                
+                <div class="row g-4" id="skillsContainer">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Formation Section -->
+        <section id="formation" class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4" data-i18n="formation.title">Formation</h2>
+                </div>
+                <div class="row" id="formationContainer">
+                    <!-- Formation will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4" data-i18n="experience.title">Expérience Professionnelle</h2>
+                    <p class="lead" data-i18n="experience.subtitle">
+                        Mon parcours professionnel dans le développement web et la cybersécurité
+                    </p>
+                </div>
+                <div class="row" id="experienceContainer">
+                    <!-- Experience will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-4" data-i18n="projects.title">Projets Principaux</h2>
+                    <p class="lead" data-i18n="projects.subtitle">
+                        Voici quelques projets sur lesquels j'ai travaillé récemment.
+                    </p>
+                </div>
+                <div class="row g-4" id="projectsContainer">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="text-center mb-5">
+                            <h2 class="display-5 fw-bold mb-4" data-i18n="contact.title">Contactez-moi</h2>
+                            <p class="lead" data-i18n="contact.subtitle">
+                                Prêt à travailler ensemble ? Discutons de votre projet.
+                            </p>
+                        </div>
+                        
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label" data-i18n="contact.form.name">Votre Nom</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                    <div class="invalid-feedback">
+                                        Veuillez entrer votre nom.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label" data-i18n="contact.form.email">Votre Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">
+                                        Veuillez entrer un email valide.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label" data-i18n="contact.form.subject">Sujet</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                    <div class="invalid-feedback">
+                                        Veuillez entrer un sujet.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label" data-i18n="contact.form.message">Votre Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Veuillez entrer votre message.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <span class="spinner-border spinner-border-sm me-2 d-none" id="loadingSpinner"></span>
+                                        <span id="submitText" data-i18n="contact.form.send">Envoyer le Message</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div id="contactAlert" class="alert d-none mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">
+                        &copy; 2024 Jay. <span data-i18n="footer.rights">Tous droits réservés.</span>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <span data-i18n="footer.built">Créé avec Bootstrap & JavaScript</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
