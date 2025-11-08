@@ -154,46 +154,139 @@ class PortfolioApp {
         };
         
         this.formation = [
+            // 2025 Certifications
+            {
+                title: this.currentLanguage === 'fr' ? 'Advanced Threat Hunting on Active Directory' : 'Advanced Threat Hunting on Active Directory',
+                institution: 'LinkedIn Learning',
+                period: 'Oct 2025',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Compétences : Cybersécurité · Active Directory' :
+                    'Skills: Cybersecurity · Active Directory',
+                category: 'certification'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'Learning Kubernetes' : 'Learning Kubernetes',
+                institution: 'LinkedIn Learning',
+                period: 'Oct 2025',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Compétences : Cloud Computing' :
+                    'Skills: Cloud Computing',
+                category: 'certification'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'Linux Command Line' : 'Linux Command Line',
+                institution: 'LinkedIn Learning',
+                period: 'Oct 2025',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Compétences : System Administration' :
+                    'Skills: System Administration',
+                category: 'certification'
+            },
+            {
+                title: 'Shopify',
+                institution: 'LinkedIn Learning',
+                period: 'Oct 2025',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Compétences : Web Technologies' :
+                    'Skills: Web Technologies',
+                category: 'certification'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'Windows Server 2025 Essential Training' : 'Windows Server 2025 Essential Training',
+                institution: 'LinkedIn Learning',
+                period: 'Oct 2025',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Compétences : Server Administration · Active Directory · Cloud Computing' :
+                    'Skills: Server Administration · Active Directory · Cloud Computing',
+                category: 'certification'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'macOS for IT Administrators' : 'macOS for IT Administrators',
+                institution: 'LinkedIn Learning',
+                period: 'Oct 2025',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Compétences : Server Administration · Networking · Security Concepts' :
+                    'Skills: Server Administration · Networking · Security Concepts',
+                category: 'certification'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'Server Administration Essential Training' : 'Server Administration Essential Training',
+                institution: 'LinkedIn Learning',
+                period: 'Sep 2025',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Compétences : Server Administration · Networking · Security Concepts · Disaster Recovery · Cloud Computing' :
+                    'Skills: Server Administration · Networking · Security Concepts · Disaster Recovery · Cloud Computing',
+                category: 'certification'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'ISC2 Certified in Cybersecurity (CC)' : 'ISC2 Certified in Cybersecurity (CC)',
+                institution: 'LinkedIn Learning',
+                period: 'Aug 2025',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Compétences : Cybersecurity · Security Concepts · Cloud Computing · Network Threats and Security · Disaster Recovery · Incident Response · Security Governance · Business Continuity · Data Security' :
+                    'Skills: Cybersecurity · Security Concepts · Cloud Computing · Network Threats and Security · Disaster Recovery · Incident Response · Security Governance · Business Continuity · Data Security',
+                category: 'certification'
+            },
+            {
+                title: this.currentLanguage === 'fr' ? 'Leading Projects' : 'Leading Projects',
+                institution: 'LinkedIn Learning',
+                period: 'Aug 2025',
+                location: 'Formation en ligne',
+                description: this.currentLanguage === 'fr' ? 
+                    'Compétences : Program Management · Structuring · Project Team Management · Setting up businesses · Root Cause · Managing Risks' :
+                    'Skills: Program Management · Structuring · Project Team Management · Setting up businesses · Root Cause · Managing Risks',
+                category: 'certification'
+            },
+            // 2023 Certifications
             {
                 title: this.currentLanguage === 'fr' ? 'COMPUTER NETWORKING - DIGITAL NETWORK SECURITY' : 'COMPUTER NETWORKING - DIGITAL NETWORK SECURITY',
                 institution: 'Alison - Cybersecurity',
-                period: '2023',
+                period: 'Aug 2023',
                 location: 'Formation en ligne',
                 description: this.currentLanguage === 'fr' ? 
-                    'Certification en sécurité des réseaux numériques et protection des infrastructures informatiques.' :
-                    'Certification in digital network security and IT infrastructure protection.',
+                    'Compétences : Infrastructure · Cybersecurity · Cyber Defense' :
+                    'Skills: Infrastructure · Cybersecurity · Cyber Defense',
                 category: 'certification'
             },
             {
                 title: this.currentLanguage === 'fr' ? 'DIPLOMA IN IDENTITY AND ACCESS MANAGEMENT' : 'DIPLOMA IN IDENTITY AND ACCESS MANAGEMENT',
-                institution: 'Alison - Cybersecurity',
-                period: '2023',
+                institution: 'Alison',
+                period: 'Aug 2023',
                 location: 'Formation en ligne',
                 description: this.currentLanguage === 'fr' ? 
-                    'Diplôme spécialisé en gestion des identités et des accès pour la sécurité des systèmes.' :
-                    'Specialized diploma in identity and access management for system security.',
+                    'Compétences : Infrastructure · Cybersecurity · Cyber Defense' :
+                    'Skills: Infrastructure · Cybersecurity · Cyber Defense',
                 category: 'certification'
             },
             {
                 title: this.currentLanguage === 'fr' ? 'IT & CYBERSECURITY RISK MANAGEMENT ESSENTIAL TRAINING' : 'IT & CYBERSECURITY RISK MANAGEMENT ESSENTIAL TRAINING',
-                institution: 'LinkedIn - Cybersecurity',
-                period: '2023',
+                institution: 'LinkedIn Learning',
+                period: 'Aug 2023',
                 location: 'Formation en ligne',
                 description: this.currentLanguage === 'fr' ? 
-                    'Formation essentielle sur la gestion des risques en cybersécurité et sécurité informatique.' :
-                    'Essential training in cybersecurity and IT risk management.',
+                    'Compétences : Infrastructure · Mobile Application Development · Cybersecurity · Cyber Defense' :
+                    'Skills: Infrastructure · Mobile Application Development · Cybersecurity · Cyber Defense',
                 category: 'certification'
             },
             {
                 title: this.currentLanguage === 'fr' ? 'INTERMEDIATE PYTHON PROGRAMMING' : 'INTERMEDIATE PYTHON PROGRAMMING',
-                institution: 'DataCamp - Python',
-                period: '2022',
+                institution: 'DataCamp',
+                period: 'Jan 2022',
                 location: 'Formation en ligne',
                 description: this.currentLanguage === 'fr' ? 
                     'Programmation Python intermédiaire pour le développement d\'applications et l\'analyse de données.' :
                     'Intermediate Python programming for application development and data analysis.',
                 category: 'certification'
             },
+            // Education
             {
                 title: this.currentLanguage === 'fr' ? 'Cours en technologie (Spécial WEB)' : 'Web Technology Course (Web Specialist)',
                 institution: 'Net Object Systems Pvt. Ltd.',
@@ -420,6 +513,11 @@ class PortfolioApp {
         this.setupContactForm();
         this.setupNavigation();
         this.setupSecurityComponent();
+        
+        // Setup image zoom after projects are loaded
+        setTimeout(() => {
+            this.setupImageZoom();
+        }, 500);
     }
     
     // Theme Management
@@ -691,10 +789,171 @@ class PortfolioApp {
         });
     }
     
-    // Security Component (placeholder)
+    // Security Component
     setupSecurityComponent() {
-        // Add any security-related functionality here
-        console.log('Security component initialized');
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S, Ctrl+A, Ctrl+C, Ctrl+P
+        document.addEventListener('keydown', (e) => {
+            // F12
+            if (e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+            
+            // Ctrl+Shift+I (Developer Tools)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                e.preventDefault();
+                return false;
+            }
+            
+            // Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+                e.preventDefault();
+                return false;
+            }
+            
+            // Ctrl+U (View Source)
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+                return false;
+            }
+            
+            // Ctrl+S (Save Page)
+            if (e.ctrlKey && e.keyCode === 83) {
+                e.preventDefault();
+                return false;
+            }
+
+            // Ctrl+A (Select All)
+            if (e.ctrlKey && e.keyCode === 65) {
+                e.preventDefault();
+                return false;
+            }
+
+            // Ctrl+C (Copy)
+            if (e.ctrlKey && e.keyCode === 67) {
+                e.preventDefault();
+                return false;
+            }
+
+            // Ctrl+P (Print)
+            if (e.ctrlKey && e.keyCode === 80) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Disable text selection
+        document.body.style.userSelect = 'none';
+        document.body.style.webkitUserSelect = 'none';
+        document.body.style.setProperty('-moz-user-select', 'none');
+        document.body.style.setProperty('-ms-user-select', 'none');
+
+        // Disable drag and drop
+        document.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+            return false;
+        });
+
+        document.addEventListener('selectstart', (e) => e.preventDefault());
+
+        // Clear console periodically
+        const clearConsole = () => {
+            if (typeof console !== 'undefined') {
+                console.clear();
+            }
+        };
+
+        // Detect developer tools
+        const detectDevTools = () => {
+            const threshold = 160;
+            setInterval(() => {
+                if (
+                    window.outerHeight - window.innerHeight > threshold ||
+                    window.outerWidth - window.innerWidth > threshold
+                ) {
+                    console.clear();
+                }
+            }, 500);
+        };
+
+        detectDevTools();
+        setInterval(clearConsole, 2000);
+    }
+    
+    // Image Zoom Modal
+    setupImageZoom() {
+        const projectImages = document.querySelectorAll('.project-image');
+        
+        projectImages.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', (e) => {
+                this.openImageModal(e.target.src, e.target.alt);
+            });
+        });
+    }
+    
+    openImageModal(src, alt) {
+        // Create modal if it doesn't exist
+        let modal = document.getElementById('imageZoomModal');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'imageZoomModal';
+            modal.className = 'image-zoom-modal';
+            modal.innerHTML = `
+                <div class="modal-overlay">
+                    <div class="modal-content">
+                        <button class="modal-close" onclick="window.portfolioApp.closeImageModal()">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                        <img src="" alt="" class="modal-image">
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            
+            // Close on overlay click
+            modal.querySelector('.modal-overlay').addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal-overlay')) {
+                    this.closeImageModal();
+                }
+            });
+            
+            // Close on ESC key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    this.closeImageModal();
+                }
+            });
+        }
+        
+        // Set image and show modal
+        const modalImg = modal.querySelector('.modal-image');
+        modalImg.src = src;
+        modalImg.alt = alt;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        
+        // Animate in
+        setTimeout(() => {
+            modal.classList.add('active');
+        }, 10);
+    }
+    
+    closeImageModal() {
+        const modal = document.getElementById('imageZoomModal');
+        if (modal) {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }, 300);
+        }
     }
 }
 
